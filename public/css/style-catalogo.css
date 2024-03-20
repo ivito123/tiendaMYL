@@ -1,0 +1,127 @@
+main{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.product-list{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.no-products {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: gray;
+}
+
+.filters {
+    background-color: rgb(255, 255, 255);
+    height: fit-content;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 21px -7px rgba(0,0,0,0.75);
+}
+
+.title-filter{
+    
+}
+
+.filter-borrar{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.b-limpiar{
+    padding: 10px 15px 10px 15px;
+    background-color: #ff2344;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+.b-limpiar:hover{
+    cursor: pointer;
+}
+
+.buttons-talle{
+    gap: 10px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-talle{
+    background-color: #5A56E9;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.buttons-clase{
+    gap: 10px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-class{
+    background-color: #5A56E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    color: #ffffff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.buttons-genders{
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-gender{
+    background-color: #5A56E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    color: #ffffff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+@media (max-width: 920px) {
+    main{
+        flex-direction: column;
+    }
+
+    .filters{
+        width: 100%;
+    }
+}

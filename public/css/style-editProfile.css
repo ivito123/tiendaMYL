@@ -1,0 +1,93 @@
+form{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    border: none;
+    width: 45%;
+    gap: 10px;
+}
+
+.searchbar form{
+    flex-direction: row;
+    width: 100%;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.input-file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background-color: #3ec898;
+    border-radius: 3px;
+  }
+  
+  .input-file:hover{
+    background-color: #5de2b4;
+    transition: 0.2s;
+  }
+  
+  .input-file p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    position: absolute;
+    color: #ffffff;
+  }
+  
+  .input-file input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+form input{
+    border: solid 1px #989898;
+    height: 40px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+form label{
+    color: #989898;
+}
+
+form button{
+    background-color: #5A56E9;;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: #6b67e4;
+    transition: 0.5s;
+}
+
+.file-input input{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 750px) {
+    form{
+        width: 100%;
+    }
+}

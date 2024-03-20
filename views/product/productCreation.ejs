@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+  <title>Sneaker Spot | Crear producto</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style-productCreation.css">
+</head>
+
+<body>
+  <%- include('../partials/header.ejs') %>
+    <main>
+      <section>
+        <form action="/product/creation" method="POST" enctype="multipart/form-data">
+          <div class="title">Crear producto</div>
+          <div class="flex-form">
+            <input type="text" name="name" placeholder="Nombre del calzado" style="border-radius: 3px 0px 0px 3px;">
+            <div id="error-name" class="require"></div>
+          </div>
+          <input type="file" name="img" class="fileinput">
+          <input type="file" name="img" class="fileinput">
+          <input type="file" name="img" class="fileinput">
+          <input type="file" name="img" class="fileinput">
+          <select id="clasesCalzado" name="class">
+            <option value="Urban">Urbano</option>
+            <option value="Basket">Basket</option>
+            <option value="Running">Running</option>
+            <option value="Kids">Niños</option>
+          </select>
+          <div class="flex-form">
+            <input type="text" name="description" placeholder="Descripcion del calzado" style="border-radius: 3px 0px 0px 3px;">
+            <div id="error-description" class="require"></div>
+          </div>
+          <input type="text" name="sizes" id="sizes" placeholder="Talle" min="37" max="44">
+          <input type="number" name="discount" placeholder="Descuento">
+          <input type="number" name="price" placeholder="Precio">
+          <select name="sex" id="sex">
+            <option value="0">F</option>
+            <option value="1">M</option>
+          </select>
+          <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+            <div class="error-messages">
+                <ul>
+                    <% errors.forEach((error, index) => { %>
+                        <li id="error-message-<%= index + 1 %>" class="error-message">
+                            <%= error.msg %>
+                        </li>
+                    <% }); %>
+                </ul>
+                <span onclick="closeAllErrorMessages()" class="close-button"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+        <% } %>
+          <button type="submit" id="submitBtn">Publicar</button>
+        </form>
+      </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+      <script>
+        function closeAllErrorMessages() {
+        var errorMessages = document.querySelector('.error-messages');
+        errorMessages.style.display = 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+    var submitBtn = document.getElementById('submitBtn');
+    var inputName = document.querySelector('input[name="name"]');
+    var inputDescription = document.querySelector('input[name="description"]');
+    // var inputDiscount = document.querySelector('input[name="discount"]');
+
+    var errorName = document.getElementById('error-name');
+    var errorDescription = document.getElementById('error-description');
+
+    submitBtn.addEventListener('click', function (evento) {
+      // Validación para el campo de nombre
+      if (!inputName.value || inputName.value.length < 5) {
+        errorName.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        errorName.style.backgroundColor = '#ff3654';
+        evento.preventDefault();
+      } else {
+        errorName.innerHTML = '<i class="fa-solid fa-check"></i>';
+        errorName.style.backgroundColor = '#3ec898';
+      }
+
+      // Validación para el campo de descripción
+      if (!inputDescription.value || inputDescription.value.length < 20) {
+        errorDescription.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        errorDescription.style.backgroundColor = '#ff3654';
+        evento.preventDefault();
+      } else {
+        errorDescription.innerHTML = '<i class="fa-solid fa-check"></i>';
+        errorDescription.style.backgroundColor = '#3ec898';
+      }
+    });
+  });
+      </script>
+</body>
+
+</html>
