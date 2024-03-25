@@ -20,41 +20,7 @@
 <body>
   <%- include('../partials/header.ejs') %>
 
-    <main>
-      <div class="filters">
-        <div class="filter-borrar">
-          <p class="title-filter">Filtros</p>
-          <button class="b-limpiar">Limpiar filtros</button>
-        </div>
-        <div class="talles">
-          <p class="title-filter" style="margin-bottom: 10px;">Talle</p>
-          <div class="buttons-talle" >
-            <div class="button-talle">37</div>
-            <div class="button-talle">38</div>
-            <div class="button-talle">39</div>
-            <div class="button-talle">40</div>
-            <div class="button-talle">41</div>
-            <div class="button-talle">42</div>
-            <div class="button-talle">43</div>
-            <div class="button-talle">44</div>
-          </div>
-        </div>
-        <div class="clases">
-          <p class="title-filter" style="margin-bottom: 10px;">Clase de calzado</p>
-          <div class="buttons-clase">
-            <div class="button-class">Basket</div>
-            <div class="button-class">Urban</div>
-            <div class="button-class">Running</div>
-            <div class="button-class">Kids</div>
-          </div>
-        </div>
-        <p class="title-filter">Género</p>
-        <div class="buttons-genders">
-          <div class="button-gender" data-gender="0">Mujer</div>
-          <div class="button-gender" data-gender="1">Hombre</div>
-        </div>
-      </div>
-
+    
       <div class="product-list">
         <% results.forEach(result=> { %>
           <div class="producto">
@@ -65,7 +31,7 @@
               <div class="desc-shoe">
                 <div class="envio-fav">
                   <p class="envio">Envio gratis</p>
-                  <button><i class="fa-solid fa-heart" style="color: #5A56E9;"></i></button>
+                  <button><i class="fa-solid fa-heart" style="color: 	#87CEEB;"></i></button>
                 </div>
                 <p class="name-shoe">
                   <%= result.name %>

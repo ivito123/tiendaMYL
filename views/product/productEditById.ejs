@@ -23,32 +23,30 @@
             <section>
                 <form action="/product/edit/<%= producto.id %>" method="POST" enctype="multipart/form-data">
                     <p class="title">Editar producto</p>
-                    <label for="name">Nombre del calzado</label>
+                    <label for="name">Nombre del producto</label>
                     <div class="flex-form">
-                    <input type="text" name="name" placeholder="Nombre del calzado" value="<%= producto.name %>" style="border-radius: 5px 0px 0px 5px">
+                    <input type="text" name="name" placeholder="Nombre del producto" value="<%= producto.name %>" style="border-radius: 5px 0px 0px 5px">
                     <div id="error-name" class="require"></div>
                 </div>
 
-                    <label for="img">Imagen del calzado</label>
+                    <label for="img">Imagen del producto</label>
                     <input type="file" name="img" class="fileinput" value="<%= producto.img %>">
 
-                    <label for="class">Clase de calzado</label>
-                    <input type="text" name="class" placeholder="Clase de calzado" value="<%= producto.class %>">
+                    <label for="class">Clase de producto</label>
+                    <input type="text" name="class" placeholder="Clase de producto" value="<%= producto.class %>">
 
-                    <label for="description">Descripcion del calzado</label>
+                    <label for="description">Descripcion del producto</label>
                     <div class="flex-form">
-                        <input type="text" name="description" placeholder="Descripcion del calzado" value="<%= producto.description %>" style="border-radius: 3px 0px 0px 3px;">
+                        <input type="text" name="description" placeholder="Descripcion del producto" value="<%= producto.description %>" style="border-radius: 3px 0px 0px 3px;">
                     <div id="error-description" class="require"></div>
                 </div>
 
-                    <label for="discount">Descuento del calzado</label>
+                    <label for="discount">Descuento del producto</label>
                     <input type="text" name="discount" value="<%= producto.discount %>">
 
-                    <label for="price">Precio del calzado</label>
+                    <label for="price">Precio del producto</label>
                     <input type="number" name="price" placeholder="Precio" value="<%= producto.price %>">
 
-                    <label for="sizes">Talles: </label>
-                    <input type="text" name="sizes" placeholder="Talles" value="<%= producto.sizes %>">
 
                     <label for="enOferta">En oferta <input type="checkbox" name="enOferta" id="enOferta"></label>
                     <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
