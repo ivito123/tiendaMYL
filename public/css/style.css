@@ -110,7 +110,7 @@ header img:hover{
     border-radius: 100%;
     font-size: 1em;
     display: none;
-    background-color: #3e3b9f;
+    /* background-color: #3e3b9f; */
     color: #b6b4ff;
     margin-left: 30px;
 }
@@ -125,7 +125,7 @@ header img:hover{
 }
 
 .header-nav a{
-    color: #ffffff;
+    color: black;
     padding: 10px 20px 10px 20px;
     border-radius: 25px;
     font-size: 0.9em;
@@ -133,7 +133,7 @@ header img:hover{
 
 .header-nav a:hover{
     transition: 0.5s;
-    background-color: #7470e8;
+    background-color: #ff8000;
     color: #ffffff;
     transition: 0.5s;
 }
@@ -331,7 +331,7 @@ a{
 }
 
 .cont-2{
-    background-image: url(../images/nikead.png);
+    background-image: url(../images/motocicleta2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #caffbf;
